@@ -1,0 +1,4 @@
+Revision history for Perl extension Image::Filter::Posterize.
+
+0.03  Fri Jun 28 18:00:00 2002
+	- Implemented OO and Module loading

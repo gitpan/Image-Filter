@@ -2,10 +2,10 @@
 package Image::Filter::Edge;
 require Exporter;
 require DynaLoader;
-use vars qw(@ISA @EXPORT_OK $VERSION);
+use vars qw(@ISA @EXPORT $VERSION);
 @ISA = qw(Exporter DynaLoader);
-@EXPORT_OK = qw(edge);
-$VERSION = "0.02";
+@EXPORT = qw(edge);
+$VERSION = 0.03;
 package Image::Filter::Edge;
 bootstrap Image::Filter::Edge;
 1;
@@ -17,11 +17,10 @@ Image::Filter::Edge - Edge an image.
 =head1 SYNOPSIS
 
     use Image::Filter;
-    use Image::Filter::Edge;
 
     $image = Image::Filter::newFromJpeg("tiabw.jpg");
-    $image = Image::Filter::Edge::edge($image);
-    Image::Filter::Jpeg($image,"test.jpg"); 
+    $image = $image->filter("edge");
+    $image->Jpeg("test.jpg"); 
 
 =head1 DESCRIPTION
 
@@ -29,9 +28,9 @@ Image::Filter is a perl module that can apply image filters. This module
 implements a simple Black & White edging. It uses the gd lib from Thomas 
 Boutell.
 
-=head2 EXPORT
+=head1 EXPORT
 
-None by default.
+edge
 
 =head1 AUTHOR
 

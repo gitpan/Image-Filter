@@ -1,10 +1,11 @@
 TYPEMAP
 gdImagePtr	FilterImage
 
-INPUT
-FilterImage
-	    $var = (gdImagePtr) SvIV($arg);
-
 OUTPUT
 FilterImage
-	    sv_setiv($arg,(I32) $var);
+	    sv_setref_iv($arg,"Image::Filter",(I32) $var);
+	    
+INPUT
+FilterImage
+	    $var = (gdImagePtr) SvIV ( (SV*) SvRV($arg));
+	    

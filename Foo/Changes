@@ -2,3 +2,9 @@ Revision history for Perl extension Image::Filter::Foo.
 
 0.01  Wed Jun 26 14:00:00 2002
 	- original version
+
+0.02  Wed Jun 26 15:00:00 2002
+	- minor tweaks and fixes
+
+0.03  Fri Jun 28 18:00:00 2002
+	- Implemented OO and Module loading

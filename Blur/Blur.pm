@@ -2,12 +2,13 @@
 package Image::Filter::Blur;
 require Exporter;
 require DynaLoader;
-use vars qw(@ISA @EXPORT_OK $VERSION);
+use vars qw(@ISA @EXPORT $VERSION);
 @ISA = qw(Exporter DynaLoader);
-@EXPORT_OK = qw(blur);
-$VERSION = "0.02";
+@EXPORT = qw(blur);
+$VERSION = 0.03;
 package Image::Filter::Blur;
 bootstrap Image::Filter::Blur;
+
 1;
 __END__
 =head1 NAME
@@ -17,20 +18,19 @@ Image::Filter::Blur - Blur an image.
 =head1 SYNOPSIS
 
     use Image::Filter;
-    use Image::Filter::Blur;
 
     $image = Image::Filter::newFromJpeg("tiabw.jpg");
-    $image = Image::Filter::Blur::blur($image);
-    Image::Filter::Jpeg($image,"test.jpg"); 
+    $image = $image->filter("blur"); #Load Image::Filter::Blur
+    $image->Jpeg("test.jpg"); 
 
 =head1 DESCRIPTION
 
 Image::Filter is a perl module that can apply image filters. This module
 implements a simple Black & White blur. It uses the gd lib from Thomas Boutell.
 
-=head2 EXPORT
+=head1 EXPORT
 
-None by default.
+blur
 
 =head1 AUTHOR
 

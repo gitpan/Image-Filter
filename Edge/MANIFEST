@@ -5,4 +5,3 @@ Edge.pm
 Edge.xs
 Makefile.PL
 MANIFEST
-typemap
