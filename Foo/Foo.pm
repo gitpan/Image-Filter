@@ -5,7 +5,7 @@ require DynaLoader;
 use vars qw(@ISA @EXPORT $VERSION);
 @ISA = qw(Exporter DynaLoader);
 @EXPORT = qw(foo);
-$VERSION = 0.03;
+$VERSION = 0.04;
 package Image::Filter::Foo;
 bootstrap Image::Filter::Foo;
 1;
