@@ -4,7 +4,7 @@ require Exporter;
 require DynaLoader;
 use vars qw(@ISA $VERSION);
 @ISA = qw(Exporter DynaLoader);
-$VERSION = 0.06;
+$VERSION = 0.07;
 bootstrap Image::Filter $VERSION;
 
 sub filter
@@ -43,6 +43,8 @@ color images images. It uses the gd2 lib from Thomas Boutell.
 None by default.
 
 =head1 FILTERS
+
+=over 4
 
 =item Blur
 
@@ -90,6 +92,10 @@ Basic, none to fancy, invert routine (truecolor)
 
 Basic, none to fancy, level routine. Add a certain value to every RGB value (truecolor)
 
+=item Oilify
+
+Oilify algorithm. Quite processor intensive. (truecolor
+
 =item Pixelize
 
 Basic, none to fancy, pixelize routine (truecolor)
@@ -110,6 +116,10 @@ Basic, none to fancy, Counter Clockwise Rotation routine (truecolor)
 
 Basic, none to fancy, sharpen routine (truecolor)
 
+=item Solarize
+
+Solarize an image (truecolor)
+
 =item Swirl
 
 Funny rotation routine (truecolor)
@@ -118,7 +128,11 @@ Funny rotation routine (truecolor)
 
 Funny rotation routine (truecolor)
 
+=back
+
 =head1 METHODS
+
+=over 4
 
 =item newFromJpeg($filename)
 
@@ -161,6 +175,8 @@ Dump image data to gd2 file. Existing file will be overwritten (if possible).
 =item Destroy
 
 Destroy the instance of Image::Filter. (RECOMMENDED USE)
+
+=back
 
 =head1 CALL FOR PARTICIPATION
 

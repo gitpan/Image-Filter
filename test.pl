@@ -79,6 +79,18 @@ for(2,4,6,8,10)
   ok($image2,"Rippling $_ waves");
 }
 
+for(32,64,96,128,160,192,224)
+{ $image2 = $image->filter("solarize",$_);
+  $image2->Jpeg("munichsolarize$_.jpg",100);
+  ok($image2,"Solarizing with $_ ");
+}
+
+#
+#for(5,6,7,8)
+#{ $image2 = $image->filter("oilify",$_);
+#  $image2->Jpeg("munichoilify$_.jpg",100);
+#  ok($image2,"Oilifying $_");
+#}
 
 $image->Destroy;
 $imagebw->Destroy;

@@ -5,7 +5,7 @@ require DynaLoader;
 use vars qw(@ISA @EXPORT $VERSION);
 @ISA = qw(Exporter DynaLoader);
 @EXPORT = qw(sharpen);
-$VERSION = 0.06;
+$VERSION = 0.07;
 package Image::Filter::Sharpen;
 bootstrap Image::Filter::Sharpen;
 

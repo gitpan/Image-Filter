@@ -12,6 +12,8 @@ extern "C" {
 
 MODULE = Image::Filter::Blur PACKAGE = Image::Filter::Blur 
 
+PROTOTYPES: DISABLE
+
 gdImagePtr 
 blur (imageptr,type=0)
         gdImagePtr  imageptr

@@ -12,6 +12,8 @@ extern "C" {
 
 MODULE = Image::Filter::Rotate PACKAGE = Image::Filter::Rotate
 
+PROTOTYPES: DISABLE
+
 gdImagePtr 
 rotate (imageptr)
         gdImagePtr  imageptr

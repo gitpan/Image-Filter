@@ -12,6 +12,8 @@ extern "C" {
 
 MODULE = Image::Filter::Floyd PACKAGE = Image::Filter::Floyd 
 
+PROTOTYPES: DISABLE
+
 gdImagePtr 
 floyd (imageptr, limit=128)
         gdImagePtr  imageptr

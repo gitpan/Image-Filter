@@ -1,9 +1,0 @@
-Revision history for Perl extension Image::Filter::Rotate.
-
-0.04  Sat Jun 29 18:00:00 2002
-	- Added parameter handling
-
-0.05  Sat Nov 23 23:00:00 2002
-	- Tweaked for TrueColor (libgd 2)
-
-0.06  Thu Jan 16 23:00:00 2003

@@ -12,6 +12,8 @@ extern "C" {
 
 MODULE = Image::Filter::Pixelize PACKAGE = Image::Filter::Pixelize 
 
+PROTOTYPES: DISABLE
+
 gdImagePtr 
 pixelize (imageptr)
         gdImagePtr  imageptr

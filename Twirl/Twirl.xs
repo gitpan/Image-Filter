@@ -12,6 +12,8 @@ extern "C" {
 
 MODULE = Image::Filter::Twirl PACKAGE = Image::Filter::Twirl
 
+PROTOTYPES: DISABLE
+
 gdImagePtr 
 twirl (imageptr)
           gdImagePtr  imageptr

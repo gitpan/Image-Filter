@@ -8,12 +8,13 @@ extern "C" {
 }
 #endif
 
-#include "swirl.h"
+#include "solarize.h"
 
-MODULE = Image::Filter::Swirl PACKAGE = Image::Filter::Swirl
+MODULE = Image::Filter::Solarize PACKAGE = Image::Filter::Solarize
 
 PROTOTYPES: DISABLE
 
 gdImagePtr 
-swirl (imageptr)
+solarize (imageptr, seed = 128)
           gdImagePtr  imageptr
+          int         seed

@@ -1,9 +1,0 @@
-Revision history for Perl extension Image::Filter::Level.
-
-0.04  Fri Jun 28 18:00:00 2002
-	- Added parameter capability
-
-0.05  Sat Nov 23 23:00:00 2002
-	- Tweaked for TrueColor (libgd 2)
-
-0.06  Thu Jan 16 23:00:00 2003

@@ -12,6 +12,8 @@ extern "C" {
 
 MODULE = Image::Filter::Sharpen PACKAGE = Image::Filter::Sharpen 
 
+PROTOTYPES: DISABLE
+
 gdImagePtr 
 sharpen (imageptr)
         gdImagePtr  imageptr

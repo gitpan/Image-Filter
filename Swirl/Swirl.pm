@@ -5,7 +5,7 @@ require DynaLoader;
 use vars qw(@ISA @EXPORT $VERSION);
 @ISA = qw(Exporter DynaLoader);
 @EXPORT = qw(swirl);
-$VERSION = 0.06;
+$VERSION = 0.07;
 package Image::Filter::Swirl;
 bootstrap Image::Filter::Swirl;
 
@@ -13,7 +13,7 @@ bootstrap Image::Filter::Swirl;
 __END__
 =head1 NAME
 
-Image::Filter::Swirl
+Image::Filter::Swirl - Rotate an image funny
 
 =head1 SYNOPSIS
 

@@ -12,5 +12,7 @@ extern "C" {
 
 MODULE = Image::Filter::Invert PACKAGE = Image::Filter::Invert
 
+PROTOTYPES: DISABLE
+
 gdImagePtr invertize (imageptr)
         gdImagePtr  imageptr

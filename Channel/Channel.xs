@@ -10,7 +10,9 @@ extern "C" {
 
 #include "channel.h"
 
-MODULE = Image::Filter::Channel PACKAGE = Image::Filter::Channel
+MODULE = Image::Filter::Channel PACKAGE = Image::Filter::Channel 
+
+PROTOTYPES: DISABLE
 
 gdImagePtr 
 channel (imageptr, chan = 3)

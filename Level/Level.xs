@@ -12,6 +12,8 @@ extern "C" {
 
 MODULE = Image::Filter::Level PACKAGE = Image::Filter::Level
 
+PROTOTYPES: DISABLE
+
 gdImagePtr 
 level (imageptr, inputlevel=0)
         gdImagePtr  imageptr

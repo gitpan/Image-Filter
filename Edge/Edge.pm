@@ -5,7 +5,7 @@ require DynaLoader;
 use vars qw(@ISA @EXPORT $VERSION);
 @ISA = qw(Exporter DynaLoader);
 @EXPORT = qw(edge);
-$VERSION = 0.06;
+$VERSION = 0.07;
 package Image::Filter::Edge;
 bootstrap Image::Filter::Edge;
 1;

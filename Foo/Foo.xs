@@ -12,6 +12,8 @@ extern "C" {
 
 MODULE = Image::Filter::Foo PACKAGE = Image::Filter::Foo 
 
+PROTOTYPES: DISABLE
+
 gdImagePtr 
 foo (imageptr)
         gdImagePtr  imageptr

@@ -12,6 +12,8 @@ extern "C" {
 
 MODULE = Image::Filter::Emboss PACKAGE = Image::Filter::Emboss 
 
+PROTOTYPES: DISABLE
+
 gdImagePtr 
 emboss (imageptr)
         gdImagePtr  imageptr

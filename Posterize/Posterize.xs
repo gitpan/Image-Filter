@@ -12,6 +12,8 @@ extern "C" {
 
 MODULE = Image::Filter::Posterize PACKAGE = Image::Filter::Posterize 
 
+PROTOTYPES: DISABLE
+
 gdImagePtr 
 posterize (imageptr)
         gdImagePtr  imageptr

@@ -8,12 +8,13 @@ extern "C" {
 }
 #endif
 
-#include "swirl.h"
+#include "oilify.h"
 
-MODULE = Image::Filter::Swirl PACKAGE = Image::Filter::Swirl
+MODULE = Image::Filter::Oilify PACKAGE = Image::Filter::Oilify
 
 PROTOTYPES: DISABLE
 
 gdImagePtr 
-swirl (imageptr)
+oilify (imageptr, seed = 8)
           gdImagePtr  imageptr
+          int         seed

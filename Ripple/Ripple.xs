@@ -12,6 +12,8 @@ extern "C" {
 
 MODULE = Image::Filter::Ripple PACKAGE = Image::Filter::Ripple
 
+PROTOTYPES: DISABLE
+
 gdImagePtr 
 ripple (imageptr, numwaves = 10)
           gdImagePtr  imageptr

@@ -12,6 +12,8 @@ extern "C" {
 
 MODULE = Image::Filter::Edge PACKAGE = Image::Filter::Edge 
 
+PROTOTYPES: DISABLE
+
 gdImagePtr 
 edge (imageptr)
         gdImagePtr  imageptr

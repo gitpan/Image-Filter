@@ -12,6 +12,8 @@ extern "C" {
 
 MODULE = Image::Filter::Eraseline PACKAGE = Image::Filter::Eraseline
 
+PROTOTYPES: DISABLE
+
 gdImagePtr 
 eraseline (imageptr, thickness = 1, orientation = 1, newr = 0, newg = 0, newb = 0)
         gdImagePtr  imageptr

@@ -5,6 +5,8 @@
 
 MODULE = Image::Filter		PACKAGE = Image::Filter		
 
+PROTOTYPES: DISABLE
+
 gdImagePtr newFromJpeg(filename)
 char*  filename
 

@@ -12,5 +12,7 @@ extern "C" {
 
 MODULE = Image::Filter::Greyscale PACKAGE = Image::Filter::Greyscale
 
+PROTOTYPES: DISABLE
+
 gdImagePtr greyscale (imageptr)
         gdImagePtr  imageptr

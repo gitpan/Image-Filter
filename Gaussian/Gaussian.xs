@@ -12,6 +12,8 @@ extern "C" {
 
 MODULE = Image::Filter::Gaussian PACKAGE = Image::Filter::Gaussian
 
+PROTOTYPES: DISABLE
+
 gdImagePtr 
 gaussian (imageptr)
           gdImagePtr  imageptr
