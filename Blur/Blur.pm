@@ -5,7 +5,7 @@ require DynaLoader;
 use vars qw(@ISA @EXPORT $VERSION);
 @ISA = qw(Exporter DynaLoader);
 @EXPORT = qw(blur);
-$VERSION = 0.05;
+$VERSION = 0.06;
 package Image::Filter::Blur;
 bootstrap Image::Filter::Blur;
 
@@ -19,7 +19,7 @@ Image::Filter::Blur - Blur an image.
 
     use Image::Filter;
 
-    $image = Image::Filter::newFromJpeg("tiabw.jpg");
+    $image = Image::Filter::newFromJpeg("munich.jpg");
     $image = $image->filter("blur"); #Load Image::Filter::Blur
     $image = $image->filter("blur",1); #Force a B&W Blur (faster)
     $image->Jpeg("test.jpg"); 

@@ -5,7 +5,7 @@ require DynaLoader;
 use vars qw(@ISA @EXPORT $VERSION);
 @ISA = qw(Exporter DynaLoader);
 @EXPORT = qw(floyd);
-$VERSION = 0.05;
+$VERSION = 0.06;
 package Image::Filter::Floyd;
 bootstrap Image::Filter::Floyd;
 
@@ -19,7 +19,7 @@ Image::Filter::Floyd - Dither an image (Floyd-Steinberg style).
 
     use Image::Filter;
 
-    $image = Image::Filter::newFromJpeg("tiabw.jpg");
+    $image = Image::Filter::newFromJpeg("munich.jpg");
     $image = $image->filter("floyd"); #Load Image::Filter::Floyd
     $image->Jpeg("test.jpg"); 
 

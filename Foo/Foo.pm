@@ -18,7 +18,7 @@ Image::Filter::Foo - Foo an image.
 
     use Image::Filter;
 
-    $image = Image::Filter::newFromJpeg("tiabw.jpg");
+    $image = Image::Filter::newFromJpeg("munich.jpg");
     $image = $image->filter("foo");
     $image->Jpeg("test.jpg"); 
 

@@ -5,7 +5,7 @@ require DynaLoader;
 use vars qw(@ISA @EXPORT $VERSION);
 @ISA = qw(Exporter DynaLoader);
 @EXPORT = qw(posterize);
-$VERSION = 0.05;
+$VERSION = 0.06;
 package Image::Filter::Posterize;
 bootstrap Image::Filter::Posterize;
 
@@ -19,7 +19,7 @@ Image::Filter::Posterize - Posterize an image.
 
     use Image::Filter;
 
-    $image = Image::Filter::newFromJpeg("tiabw.jpg");
+    $image = Image::Filter::newFromJpeg("munich.jpg");
     $image = $image->filter("posterize"); #Load Image::Filter::Posterize
     $image->Jpeg("test.jpg"); 
 

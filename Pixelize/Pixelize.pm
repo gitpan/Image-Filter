@@ -5,7 +5,7 @@ require DynaLoader;
 use vars qw(@ISA @EXPORT $VERSION);
 @ISA = qw(Exporter DynaLoader);
 @EXPORT = qw(pixelize);
-$VERSION = 0.05;
+$VERSION = 0.06;
 package Image::Filter::Pixelize;
 bootstrap Image::Filter::Pixelize;
 
@@ -19,7 +19,7 @@ Image::Filter::Pixelize - Pixelize an image.
 
     use Image::Filter;
 
-    $image = Image::Filter::newFromJpeg("tiabw.jpg");
+    $image = Image::Filter::newFromJpeg("munich.jpg");
     $image = $image->filter("pixelize"); #Load Image::Filter::Pixelize
     $image->Jpeg("test.jpg"); 
 

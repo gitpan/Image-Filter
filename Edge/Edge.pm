@@ -5,7 +5,7 @@ require DynaLoader;
 use vars qw(@ISA @EXPORT $VERSION);
 @ISA = qw(Exporter DynaLoader);
 @EXPORT = qw(edge);
-$VERSION = 0.05;
+$VERSION = 0.06;
 package Image::Filter::Edge;
 bootstrap Image::Filter::Edge;
 1;
@@ -18,7 +18,7 @@ Image::Filter::Edge - Edge an image.
 
     use Image::Filter;
 
-    $image = Image::Filter::newFromJpeg("tiabw.jpg");
+    $image = Image::Filter::newFromJpeg("munich.jpg");
     $image = $image->filter("edge");
     $image->Jpeg("test.jpg"); 
 

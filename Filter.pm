@@ -4,7 +4,7 @@ require Exporter;
 require DynaLoader;
 use vars qw(@ISA $VERSION);
 @ISA = qw(Exporter DynaLoader);
-$VERSION = 0.05;
+$VERSION = 0.06;
 bootstrap Image::Filter $VERSION;
 
 sub filter
@@ -27,7 +27,7 @@ Image::Filter - Apply filters onto images.
 
     use Image::Filter;
 
-    $image = Image::Filter::newFromJpeg("tiabw.jpg");
+    $image = Image::Filter::newFromJpeg("munich.jpg");
     $image = $image->filter("blur");
     $image->Jpeg("blurtest.jpg",$quality); #1-100, use negative value for default
     $image->Destroy;
@@ -74,6 +74,10 @@ Basic, none to fancy, foo routine. Example filter
 
 Oh yeah, this is a dummy filter :)
 
+=item Gaussian
+
+Gaussian Blur (truecolor)
+
 =item Greyscale
 
 Basic, weighted average greyscale routine
@@ -94,6 +98,10 @@ Basic, none to fancy, pixelize routine (truecolor)
 
 Basic, none to fancy, Black and White posterize routine (truecolor)
 
+=item Ripple
+
+Add ripples (truecolor)
+
 =item Rotate
 
 Basic, none to fancy, Counter Clockwise Rotation routine (truecolor)
@@ -101,6 +109,14 @@ Basic, none to fancy, Counter Clockwise Rotation routine (truecolor)
 =item Sharpen
 
 Basic, none to fancy, sharpen routine (truecolor)
+
+=item Swirl
+
+Funny rotation routine (truecolor)
+
+=item Twirl
+
+Funny rotation routine (truecolor)
 
 =head1 METHODS
 

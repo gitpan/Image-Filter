@@ -5,7 +5,7 @@ require DynaLoader;
 use vars qw(@ISA @EXPORT $VERSION);
 @ISA = qw(Exporter DynaLoader);
 @EXPORT = qw(eraseline);
-$VERSION = 0.05;
+$VERSION = 0.06;
 package Image::Filter::Eraseline;
 bootstrap Image::Filter::Eraseline;
 
@@ -19,7 +19,7 @@ Image::Filter::Eraseline - Erase every Nth line from an image.
 
     use Image::Filter;
 
-    $image = Image::Filter::newFromJpeg("tiabw.jpg");
+    $image = Image::Filter::newFromJpeg("munich.jpg");
     $image = $image->filter("eraseline",1,1,250,128,0); #Load Image::Filter::Eraseline
     #Erase every other line (thickness 1 pixel) vertically, fill with RGB color 250,128,0
     $image->Jpeg("test.jpg"); 

@@ -5,7 +5,7 @@ require DynaLoader;
 use vars qw(@ISA @EXPORT $VERSION);
 @ISA = qw(Exporter DynaLoader);
 @EXPORT = qw(invert);
-$VERSION = 0.05;
+$VERSION = 0.06;
 package Image::Filter::Invert;
 bootstrap Image::Filter::Invert;
 
@@ -22,7 +22,7 @@ Image::Filter::Invert - Invert an image.
 
     use Image::Filter;
 
-    $image = Image::Filter::newFromJpeg("tiabw.jpg");
+    $image = Image::Filter::newFromJpeg("munich.jpg");
     $image = $image->filter("invert"); #Load Image::Filter::Invert
     $image->Jpeg("test.jpg"); 
 

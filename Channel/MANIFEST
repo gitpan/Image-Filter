@@ -1,0 +1,7 @@
+Changes
+channel.c
+channel.h
+Channel.pm
+Channel.xs
+Makefile.PL
+MANIFEST

@@ -5,7 +5,7 @@ require DynaLoader;
 use vars qw(@ISA @EXPORT $VERSION);
 @ISA = qw(Exporter DynaLoader);
 @EXPORT = qw(rotate);
-$VERSION = 0.05;
+$VERSION = 0.06;
 package Image::Filter::Rotate;
 bootstrap Image::Filter::Rotate;
 
@@ -19,7 +19,7 @@ Image::Filter::Rotate - Rotate an image CCW
 
     use Image::Filter;
 
-    $image = Image::Filter::newFromJpeg("tiabw.jpg");
+    $image = Image::Filter::newFromJpeg("munich.jpg");
     $image = $image->filter("rotate"); #Load Image::Filter::Rotate
     $image->Jpeg("test.jpg"); 
 

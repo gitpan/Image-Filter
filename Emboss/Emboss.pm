@@ -5,7 +5,7 @@ require DynaLoader;
 use vars qw(@ISA @EXPORT $VERSION);
 @ISA = qw(Exporter DynaLoader);
 @EXPORT = qw(emboss);
-$VERSION = 0.05;
+$VERSION = 0.06;
 package Image::Filter::Emboss;
 bootstrap Image::Filter::Emboss;
 1;
@@ -18,7 +18,7 @@ Image::Filter::Emboss - Emboss an image.
 
     use Image::Filter;
 
-    $image = Image::Filter::newFromJpeg("tiabw.jpg");
+    $image = Image::Filter::newFromJpeg("munich.jpg");
     $image = $image->filter("emboss");
     $image->Jpeg("test.jpg"); 
 

@@ -1,5 +1,5 @@
 // C code for Image::Filter
-// (c) 2002 - Hendrik Van Belleghem
+// (c) 2003 - Hendrik Van Belleghem
 // hendrik@quickndirty.org
 // Released under the GPL
 

@@ -1,4 +1,4 @@
-Image::Filter version 0.05
+Image::Filter version 0.06
 ==========================
 
 Image::Filter applies filters onto images. The included filters are still work
@@ -28,7 +28,7 @@ the new gdlib. Did I mention this module is work under development?
 
 COPYRIGHT AND LICENCE
 
-Copyright (C) 2002 Hendrik Van Belleghem.
+Copyright (C) 2003 Hendrik Van Belleghem.
 
 Image::Filter is released under the GNU Public License. See COPYING and 
 COPYRIGHT for more information.

@@ -5,7 +5,7 @@ require DynaLoader;
 use vars qw(@ISA @EXPORT $VERSION);
 @ISA = qw(Exporter DynaLoader);
 @EXPORT = qw(greyscale);
-$VERSION = 0.05;
+$VERSION = 0.06;
 package Image::Filter::Greyscale;
 bootstrap Image::Filter::Greyscale;
 
@@ -19,7 +19,7 @@ Image::Filter::Greyscale - Greyscale an image.
 
     use Image::Filter;
 
-    $image = Image::Filter::newFromJpeg("tiabw.jpg");
+    $image = Image::Filter::newFromJpeg("munich.jpg");
     $image = $image->filter("greyscale"); #Load Image::Filter::Greyscale
     $image->Jpeg("test.jpg"); 
 

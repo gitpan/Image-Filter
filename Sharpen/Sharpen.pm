@@ -5,7 +5,7 @@ require DynaLoader;
 use vars qw(@ISA @EXPORT $VERSION);
 @ISA = qw(Exporter DynaLoader);
 @EXPORT = qw(sharpen);
-$VERSION = 0.05;
+$VERSION = 0.06;
 package Image::Filter::Sharpen;
 bootstrap Image::Filter::Sharpen;
 
@@ -19,7 +19,7 @@ Image::Filter::Sharpen - Sharpen an image.
 
     use Image::Filter;
 
-    $image = Image::Filter::newFromJpeg("tiabw.jpg");
+    $image = Image::Filter::newFromJpeg("munich.jpg");
     $image = $image->filter("sharpen"); #Load Image::Filter::Sharpen
     $image->Jpeg("test.jpg"); 
 
