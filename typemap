@@ -1,0 +1,10 @@
+TYPEMAP
+gdImagePtr	FilterImage
+
+INPUT
+FilterImage
+	    $var = (gdImagePtr) SvIV($arg);
+
+OUTPUT
+FilterImage
+	    sv_setiv($arg,(I32) $var);
