@@ -5,7 +5,7 @@ require DynaLoader;
 use vars qw(@ISA @EXPORT $VERSION);
 @ISA = qw(Exporter DynaLoader);
 @EXPORT = qw(blur);
-$VERSION = 0.04;
+$VERSION = 0.05;
 package Image::Filter::Blur;
 bootstrap Image::Filter::Blur;
 
@@ -21,12 +21,17 @@ Image::Filter::Blur - Blur an image.
 
     $image = Image::Filter::newFromJpeg("tiabw.jpg");
     $image = $image->filter("blur"); #Load Image::Filter::Blur
+    $image = $image->filter("blur",1); #Force a B&W Blur (faster)
     $image->Jpeg("test.jpg"); 
 
 =head1 DESCRIPTION
 
 Image::Filter is a perl module that can apply image filters. This module
-implements a simple Black & White blur. It uses the gd lib from Thomas Boutell.
+implements a simple blur. The true color blur is slower than the  Black & White
+blur included in release 0.04 and below. If you, for some reason, still want to
+use the Black & White blur instead of the current true color blue, add a 1 to
+the parameter list (as demonstrated above). It uses the gd lib from Thomas 
+Boutell. This filter handles true color images.
 
 =head1 EXPORT
 

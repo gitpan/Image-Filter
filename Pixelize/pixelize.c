@@ -20,7 +20,7 @@ gdImagePtr pixelize (gdImagePtr imageptr)
   int newbcolor = 0;
   dimx = gdImageSX(imageptr);
   dimy = gdImageSY(imageptr);
-  impixel = gdImageCreate(dimx,dimy);
+  impixel = gdImageCreateTrueColor(dimx,dimy);
   for (w = 0; w < dimx-1 ; w += 2)
   { for (h = 0; h < dimy-1 ; h += 2)
     { newrcolor = gdImageRed(imageptr,gdImageGetPixel(imageptr,w,h));

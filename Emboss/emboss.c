@@ -15,17 +15,17 @@ gdImagePtr emboss (gdImagePtr imageptr)
   int h = 0;
   int index = 0;
   int factor = 50;
+  int newcolor = 0;
   dimx = gdImageSX(imageptr);
   dimy = gdImageSY(imageptr);
-  imemb = gdImageCreate(dimx,dimy);
+  imemb = gdImageCreateTrueColor(dimx,dimy);
 
   for (w = 0; w < dimx ; w++)
   { for (h = 0; h < dimy ; h++)
-    { float newfcolor = (  
+    { newcolor = (int) (  
       -gdImageRed(imageptr,gdImageGetPixel(imageptr,w-1,h-1))+
        gdImageRed(imageptr,gdImageGetPixel(imageptr,w+1,h+1))+factor);
    
-       int newcolor = (int) newfcolor;
        newcolor = newcolor > 255 ? 255 : (newcolor < 0 ? 0 : newcolor);
        index = gdImageColorExact(imemb,newcolor,newcolor,newcolor);
        if (index == -1) { index = gdImageColorAllocate(imemb,newcolor,newcolor,newcolor); }

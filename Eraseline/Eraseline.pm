@@ -5,7 +5,7 @@ require DynaLoader;
 use vars qw(@ISA @EXPORT $VERSION);
 @ISA = qw(Exporter DynaLoader);
 @EXPORT = qw(eraseline);
-$VERSION = 0.04;
+$VERSION = 0.05;
 package Image::Filter::Eraseline;
 bootstrap Image::Filter::Eraseline;
 
@@ -27,7 +27,8 @@ Image::Filter::Eraseline - Erase every Nth line from an image.
 =head1 DESCRIPTION
 
 Image::Filter is a perl module that can apply image filters. This module
-implements a line erasing. It uses the gd lib from Thomas Boutell.
+implements a line erasing. It uses the gd lib from Thomas Boutell. This filter
+handles true color images.
 
 =head1 EXPORT
 

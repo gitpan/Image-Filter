@@ -20,7 +20,7 @@ gdImagePtr rotate (gdImagePtr imageptr)
   int newbcolor = 0;
   dimx = gdImageSX(imageptr);
   dimy = gdImageSY(imageptr);
-  imrotate = gdImageCreate(dimy,dimx);
+  imrotate = gdImageCreateTrueColor(dimy,dimx);
   for (w = 0; w < dimx ; w++)
   { for (h = 0; h < dimy ; h++)
     { newrcolor = gdImageRed(imageptr,gdImageGetPixel(imageptr,w,h));

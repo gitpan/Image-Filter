@@ -15,16 +15,14 @@ gdImagePtr foo (gdImagePtr imageptr)
   int w = 0;
   int h = 0;
   int index = 0;
-  float newfcolor = 0.0;
   int newcolor = 0;
   dimx = gdImageSX(imageptr);
   dimy = gdImageSY(imageptr);
-  imfoo = gdImageCreate(dimx,dimy);
+  imfoo = gdImageCreateTrueColor(dimx,dimy);
   for (w = 0; w < dimx ; w++)
   { for (h = 0; h < dimy ; h++)
     { //Manipulate your pixels here :)
-      // newfcolor = gdImageRed(imageptr,gdImageGetPixel(imageptr,w,h));
-      // newcolor = (int) newfcolor;
+      // newcolor = gdImageRed(imageptr,gdImageGetPixel(imageptr,w,h));
       // newcolor = newcolor > 255 ? 255 : (newcolor < 0 ? 0 : newcolor);
       // index = gdImageColorExact(imfoo,newcolor,newcolor,newcolor);
       // if (index == -1) { index = gdImageColorAllocate(imfoo,newcolor,newcolor,newcolor); }

@@ -59,7 +59,33 @@ gdImagePtr newFromGd (char *filename)
   fclose(in);
   return im;
 }
+/*
+gdImagePtr newFromWmp (char *filename)
+{ FILE *in;
+  gdImagePtr im;
+  in = fopen(filename, "rb");
+  if (in == NULL)
+  { fprintf(stderr,"Cannot open %s\n",filename);
+    exit(EXIT_FAILURE);
+  }
+  im = gdImageCreateFromWmp(in);
+  fclose(in);
+  return im;
+}
 
+gdImagePtr newFromXbm (char *filename)
+{ FILE *in;
+  gdImagePtr im;
+  in = fopen(filename, "rb");
+  if (in == NULL)
+  { fprintf(stderr,"Cannot open %s\n",filename);
+    exit(EXIT_FAILURE);
+  }
+  im = gdImageCreateFromXbm(in);
+  fclose(in);
+  return im;
+}
+*/
 void Png(gdImagePtr imageptr, char *filename)
 { FILE *out;
   out = fopen(filename, "wb");
@@ -103,6 +129,28 @@ void Gd2(gdImagePtr imageptr, char *filename)
   gdImageGd2(imageptr, out, 0, GD2_FMT_COMPRESSED);
   fclose(out);
 }
+/*
+void Xbm(gdImagePtr imageptr, char *filename)
+{ FILE *out;
+  out = fopen(filename, "wb");
+  if (out == NULL)
+  { fprintf(stderr,"Cannot open %s\n",filename);
+    exit(EXIT_FAILURE);
+  }
+  gdImageXbm(imageptr, out);
+  fclose(out);
+}
 
+void Wmp(gdImagePtr imageptr, char *filename)
+{ FILE *out;
+  out = fopen(filename, "wb");
+  if (out == NULL)
+  { fprintf(stderr,"Cannot open %s\n",filename);
+    exit(EXIT_FAILURE);
+  }
+  gdImageWmp(imageptr, out);
+  fclose(out);
+}
+*/
 void Destroy(gdImagePtr imageptr)
 { gdImageDestroy(imageptr); }

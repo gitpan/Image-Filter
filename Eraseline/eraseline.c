@@ -19,7 +19,7 @@ gdImagePtr eraseline (gdImagePtr imageptr, int thickness, int orientation, int n
   int newcolor = 0;
   dimx = gdImageSX(imageptr);
   dimy = gdImageSY(imageptr);
-  imerase = gdImageCreate(dimx,dimy);
+  imerase = gdImageCreateTrueColor(dimx,dimy);
   gdImageCopy(imerase,imageptr,0,0,0,0,dimx,dimy);
   newcolor = gdImageColorAllocate(imerase, newr, newg, newb);
   if (newcolor == -1) { newcolor = gdImageColorClosest(imerase,newr,newg,newb); }

@@ -4,7 +4,7 @@ require Exporter;
 require DynaLoader;
 use vars qw(@ISA $VERSION);
 @ISA = qw(Exporter DynaLoader);
-$VERSION = 0.04;
+$VERSION = 0.05;
 bootstrap Image::Filter $VERSION;
 
 sub filter
@@ -34,10 +34,9 @@ Image::Filter - Apply filters onto images.
 
 =head1 DESCRIPTION
 
-Image::Filter is a perl module that can apply image filters. Currently
-blurring and embossing are included (several others are under development).
-Image::Filter currently only does Black & White images. It uses the gd lib
-from Thomas Boutell.
+Image::Filter is a perl module that can apply image filters. A limited number
+of filters are included (see list below). Image::Filter currently does true 
+color images images. It uses the gd2 lib from Thomas Boutell.
 
 =head1 EXPORT
 
@@ -47,7 +46,11 @@ None by default.
 
 =item Blur
 
-Basic, none to fancy, Black and White blur routine
+Basic, none to fancy, blur routine (truecolor)
+
+=item Channel
+
+Extract Red, Green or Blue channels from an image (truecolor)
 
 =item Edge
 
@@ -59,11 +62,15 @@ Basic, none to fancy, Black and White emboss routine
 
 =item Eraseline
 
-Erase every Nth line, with a specific color, thickness, either horizontally or vertically
+Erase every Nth line, with a specific color, thickness, either horizontally or vertically (truecolor)
+
+=item Floyd
+
+Dither an image using basic a Floyd-Steinberg Dither algorithm.
 
 =item Foo
 
-Basic, none to fancy, Black and White foo routine
+Basic, none to fancy, foo routine. Example filter
 
 Oh yeah, this is a dummy filter :)
 
@@ -73,27 +80,27 @@ Basic, weighted average greyscale routine
 
 =item Invert
 
-Basic, none to fancy, invert routine
+Basic, none to fancy, invert routine (truecolor)
 
 =item Level
 
-Basic, none to fancy, level routine. Add a certain value to every RGB value.
+Basic, none to fancy, level routine. Add a certain value to every RGB value (truecolor)
 
 =item Pixelize
 
-Basic, none to fancy, pixelize routine. 
+Basic, none to fancy, pixelize routine (truecolor)
 
 =item Posterize
 
-Basic, none to fancy, Black and White posterize routine
+Basic, none to fancy, Black and White posterize routine (truecolor)
 
 =item Rotate
 
-Basic, none to fancy, Counter Clockwise Rotation routine.
+Basic, none to fancy, Counter Clockwise Rotation routine (truecolor)
 
 =item Sharpen
 
-Basic, none to fancy, Black and White sharpen routine
+Basic, none to fancy, sharpen routine (truecolor)
 
 =head1 METHODS
 

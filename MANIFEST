@@ -2,6 +2,7 @@ filter.c
 filter.h
 Filter.pm
 Filter.xs
+Filter.xs.old
 Makefile.PL
 MANIFEST
 README
@@ -36,6 +37,13 @@ Eraseline/Eraseline.pm
 Eraseline/Eraseline.xs
 Eraseline/Makefile.PL
 Eraseline/MANIFEST
+Floyd/Changes
+Floyd/floyd.c
+Floyd/floyd.h
+Floyd/Floyd.pm
+Floyd/Floyd.xs
+Floyd/Makefile.PL
+Floyd/MANIFEST
 Foo/Changes
 Foo/foo.c
 Foo/foo.h

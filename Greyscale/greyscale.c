@@ -15,18 +15,16 @@ gdImagePtr greyscale (gdImagePtr imageptr)
   int w = 0;
   int h = 0;
   int index = 0;
-  float newfcolor = 0;
   int newcolor = 0;
   dimx = gdImageSX(imageptr);
   dimy = gdImageSY(imageptr);
-  imgrey = gdImageCreate(dimx,dimy);
+  imgrey = gdImageCreateTrueColor(dimx,dimy);
   for (w = 0; w < dimx ; w++)
   { for (h = 0; h < dimy ; h++)
-    { newfcolor = 
+    { newcolor = (int)
       (3 * gdImageRed(imageptr,gdImageGetPixel(imageptr,w,h)) +
        2 * gdImageGreen(imageptr,gdImageGetPixel(imageptr,w,h)) +
        4 * gdImageBlue(imageptr,gdImageGetPixel(imageptr,w,h)) ) / 9;
-      newcolor = (int) newfcolor;
       index = gdImageColorExact(imgrey,newcolor,newcolor,newcolor);
       if (index == -1) { index = gdImageColorAllocate(imgrey,newcolor,newcolor,newcolor); }
       gdImageSetPixel(imgrey,w,h,index);

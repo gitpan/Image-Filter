@@ -21,7 +21,7 @@ gdImagePtr invertize (gdImagePtr imageptr)
   int newbcolor = 0;
   dimx = gdImageSX(imageptr);
   dimy = gdImageSY(imageptr);
-  iminvert = gdImageCreate(dimx,dimy);
+  iminvert = gdImageCreateTrueColor(dimx,dimy);
   for (w = 0; w < dimx ; w++)
   { for (h = 0; h < dimy ; h++)
     { newrcolor = 255-gdImageRed(imageptr,gdImageGetPixel(imageptr,w,h));

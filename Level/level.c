@@ -20,7 +20,7 @@ gdImagePtr level (gdImagePtr imageptr, int inputlevel)
   int newbcolor = 0;
   dimx = gdImageSX(imageptr);
   dimy = gdImageSY(imageptr);
-  imlevel = gdImageCreate(dimx,dimy);
+  imlevel = gdImageCreateTrueColor(dimx,dimy);
   for (w = 0; w < dimx ; w++)
   { for (h = 0; h < dimy ; h++)
     { newrcolor = gdImageRed(imageptr,gdImageGetPixel(imageptr,w,h))+inputlevel;

@@ -8,11 +8,11 @@ extern "C" {
 }
 #endif
 
-#include "blur.h"
+#include "floyd.h"
 
-MODULE = Image::Filter::Blur PACKAGE = Image::Filter::Blur 
+MODULE = Image::Filter::Floyd PACKAGE = Image::Filter::Floyd 
 
 gdImagePtr 
-blur (imageptr,type=0)
+floyd (imageptr, limit=128)
         gdImagePtr  imageptr
-        int type
+        int  limit

@@ -5,7 +5,7 @@ require DynaLoader;
 use vars qw(@ISA @EXPORT $VERSION);
 @ISA = qw(Exporter DynaLoader);
 @EXPORT = qw(invert);
-$VERSION = 0.04;
+$VERSION = 0.05;
 package Image::Filter::Invert;
 bootstrap Image::Filter::Invert;
 
@@ -29,7 +29,8 @@ Image::Filter::Invert - Invert an image.
 =head1 DESCRIPTION
 
 Image::Filter is a perl module that can apply image filters. This module
-implements a simple invert. It uses the gd lib from Thomas Boutell.
+implements a simple invert. It uses the gd lib from Thomas Boutell. This filter
+handles true color images.
 
 =head1 EXPORT
 

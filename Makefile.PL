@@ -4,7 +4,7 @@ use ExtUtils::MakeMaker;
 WriteMakefile(
     'NAME'		=> 'Image::Filter',
     'VERSION_FROM'	=> 'Filter.pm', # finds $VERSION
-    'LIBS'		=> ['-lgd -ljpeg -lpng'], # e.g., '-lm'
+    'LIBS'		=> ['-lgd -ljpeg -lpng -lm'], # e.g., '-lm'
     'OBJECT'		=> '$(O_FILES)', # link all the C files too
     'dist' => {COMPRESS=>'gzip',SUFFIX=>'gz'},
 );

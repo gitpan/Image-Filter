@@ -5,7 +5,7 @@ require DynaLoader;
 use vars qw(@ISA @EXPORT $VERSION);
 @ISA = qw(Exporter DynaLoader);
 @EXPORT = qw(rotate);
-$VERSION = 0.04;
+$VERSION = 0.05;
 package Image::Filter::Rotate;
 bootstrap Image::Filter::Rotate;
 
@@ -27,6 +27,7 @@ Image::Filter::Rotate - Rotate an image CCW
 
 Image::Filter is a perl module that can apply image filters. This module
 implements a simple CCW Rotation. It uses the gd lib from Thomas Boutell.
+This filter handles true color images.
 
 =head1 EXPORT
 

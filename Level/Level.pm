@@ -5,7 +5,7 @@ require DynaLoader;
 use vars qw(@ISA @EXPORT $VERSION);
 @ISA = qw(Exporter DynaLoader);
 @EXPORT = qw(level);
-$VERSION = 0.04;
+$VERSION = 0.05;
 package Image::Filter::Level;
 bootstrap Image::Filter::Level;
 
@@ -27,7 +27,8 @@ Image::Filter::Level - Level an image.
 =head1 DESCRIPTION
 
 Image::Filter is a perl module that can apply image filters. This module
-implements a simple level function. It uses the gd lib from Thomas Boutell.
+implements a simple level function. It uses the gd lib from Thomas Boutell. 
+This filter handles true color images.
 
 =head1 EXPORT
 

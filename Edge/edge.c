@@ -15,13 +15,14 @@ gdImagePtr edge (gdImagePtr imageptr)
   int h = 0;
   int index = 0;
   int factor = 50;
+  int newcolor = 0;
   dimx = gdImageSX(imageptr);
   dimy = gdImageSY(imageptr);
-  imedge = gdImageCreate(dimx,dimy);
+  imedge = gdImageCreateTrueColor(dimx,dimy);
 
   for (w = 0; w < dimx ; w++)
   { for (h = 0; h < dimy ; h++)
-    { float newfcolor = (  
+    { newcolor = (int) (  
 	-gdImageRed(imageptr,gdImageGetPixel(imageptr,w-1,h-1))
 	-gdImageRed(imageptr,gdImageGetPixel(imageptr,w-1,h))
 	-gdImageRed(imageptr,gdImageGetPixel(imageptr,w-1,h+1))
@@ -34,7 +35,6 @@ gdImagePtr edge (gdImagePtr imageptr)
 	+(8*gdImageRed(imageptr,gdImageGetPixel(imageptr,w,h)))
 	-gdImageRed(imageptr,gdImageGetPixel(imageptr,w,h+1)));
    
-       int newcolor = (int) newfcolor;
        newcolor = newcolor > 255 ? 255 : (newcolor < 0 ? 0 : newcolor);
        index = gdImageColorExact(imedge,newcolor,newcolor,newcolor);
        if (index == -1) { index = gdImageColorAllocate(imedge,newcolor,newcolor,newcolor); }

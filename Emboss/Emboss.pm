@@ -5,7 +5,7 @@ require DynaLoader;
 use vars qw(@ISA @EXPORT $VERSION);
 @ISA = qw(Exporter DynaLoader);
 @EXPORT = qw(emboss);
-$VERSION = 0.04;
+$VERSION = 0.05;
 package Image::Filter::Emboss;
 bootstrap Image::Filter::Emboss;
 1;
