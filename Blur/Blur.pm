@@ -2,8 +2,10 @@
 package Image::Filter::Blur;
 require Exporter;
 require DynaLoader;
+use vars qw(@ISA @EXPORT_OK $VERSION);
 @ISA = qw(Exporter DynaLoader);
 @EXPORT_OK = qw(blur);
+$VERSION = "0.02";
 package Image::Filter::Blur;
 bootstrap Image::Filter::Blur;
 1;
@@ -18,8 +20,8 @@ Image::Filter::Blur - Blur an image.
     use Image::Filter::Blur;
 
     $image = Image::Filter::newFromJpeg("tiabw.jpg");
-    $image = Image::Filter::filter("blur",$image);
-    Image::Filter::Jpeg($image,"/temp/test.pl"); 
+    $image = Image::Filter::Blur::blur($image);
+    Image::Filter::Jpeg($image,"test.jpg"); 
 
 =head1 DESCRIPTION
 

@@ -1,4 +1,5 @@
 // C code for Image::Filter::Blur
+// Simple Black & White Blur
 // (c) 2002 - Hendrik Van Belleghem
 // hendrik@quickndirty.org
 // Released under the GPL
@@ -32,6 +33,7 @@ gdImagePtr blur (gdImagePtr imageptr)
       gdImageRed(imageptr,gdImageGetPixel(imageptr,w+1,h-1))+
       gdImageRed(imageptr,gdImageGetPixel(imageptr,w+1,h))+
       gdImageRed(imageptr,gdImageGetPixel(imageptr,w+1,h+1)) )/9; 
+
       newcolor = (int) newfcolor;
       newcolor = newcolor > 255 ? 255 : (newcolor < 0 ? 0 : newcolor);
       index = gdImageColorExact(imblur,newcolor,newcolor,newcolor);

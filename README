@@ -1,4 +1,4 @@
-Image::Filter version 0.01
+Image::Filter version 0.02
 ==========================
 
 Image::Filter applies filters onto images. The included filters are still work

@@ -1,4 +1,3 @@
-Changes
 filter.c
 filter.h
 Filter.pm
@@ -16,6 +15,15 @@ Blur/Blur.xs
 Blur/Changes
 Blur/Makefile.PL
 Blur/MANIFEST
+Blur/typemap
+Edge/Changes
+Edge/edge.c
+Edge/edge.h
+Edge/Edge.pm
+Edge/Edge.xs
+Edge/Makefile.PL
+Edge/MANIFEST
+Edge/typemap
 Emboss/Changes
 Emboss/emboss.c
 Emboss/emboss.h
@@ -23,6 +31,7 @@ Emboss/Emboss.pm
 Emboss/Emboss.xs
 Emboss/Makefile.PL
 Emboss/MANIFEST
+Emboss/typemap
 Foo/Changes
 Foo/foo.c
 Foo/foo.h

@@ -3,6 +3,5 @@ emboss.c
 emboss.h
 Emboss.pm
 Emboss.xs
-Makefile
 Makefile.PL
 MANIFEST

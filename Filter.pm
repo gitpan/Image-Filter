@@ -4,8 +4,9 @@ use strict;
 require Exporter;
 require DynaLoader;
 use AutoLoader qw(AUTOLOAD);
-our @ISA = qw(Exporter DynaLoader);
-our $VERSION = '0.01';
+use vars qw(@ISA $VERSION);
+@ISA = qw(Exporter DynaLoader);
+$VERSION = "0.02";
 bootstrap Image::Filter $VERSION;
 
 1;
@@ -20,7 +21,7 @@ Image::Filter - Apply filters onto images.
     use Image::Filter::Blur;
 
     $image = Image::Filter::newFromJpeg("tiabw.jpg");
-    $image = Image::Filter::filter("blur",$image);
+    $image = Image::Filter::Blur::blur($image);
     Image::Filter::Jpeg($image,"/temp/test.pl"); 
 
 =head1 DESCRIPTION
@@ -29,8 +30,6 @@ Image::Filter is a perl module that can apply image filters. Currently
 blurring and embossing are included (several others are under development).
 Image::Filter currently only does Black & White images. It uses the gd lib
 from Thomas Boutell.
-
-Blah blah blah.
 
 =head2 EXPORT
 

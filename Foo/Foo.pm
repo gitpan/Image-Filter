@@ -2,8 +2,10 @@
 package Image::Filter::Foo;
 require Exporter;
 require DynaLoader;
+use vars qw(@ISA @EXPORT_OK $VERSION);
 @ISA = qw(Exporter DynaLoader);
 @EXPORT_OK = qw(foo);
+$VERSION = "0.02";
 package Image::Filter::Foo;
 bootstrap Image::Filter::Foo;
 1;
